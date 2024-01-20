@@ -16,15 +16,24 @@ class BooksController < ApplicationController
   end
 
   def index
+    @user = User.find(current_user.id)
     @books = Book.all
+    @book = Book.new
   end
 
   def show
     @book = Book.find(params[:id])
+    @user = User.find(current_user.id)
+    @book_new = Book.new
   end
 
   def edit
     @book = Book.find(params[:id])
+    @user = User.find(current_user.id)
+    if @book.user != current_user
+       @books = Book.all
+       redirect_to books_path
+    end
   end
 
   def update

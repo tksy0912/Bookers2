@@ -1,5 +1,7 @@
 <h2>Users</h2>
 
+<%= render 'books/list', book: @book, user: @user %>
+
 <% @users.each do |user| %>
   <div>
     <%= link_to users_path(user.id) do %>
