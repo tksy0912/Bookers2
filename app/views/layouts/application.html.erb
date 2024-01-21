@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+
     <script src="https://kit.fontawesome.com/86eb26b4da.js" crossorigin="anonymous"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -50,7 +50,7 @@
                <% end %>
              </li>
              <li class="nav-item">
-               <%= link_to 'homes/about', class: 'nav-link text-white' do %>
+               <%= link_to home_about_path, class: 'nav-link text-white' do %>
                  <i class="fa-solid fa-link" style="color: #ffffff;"></i>About
                <% end %>
              </li>
@@ -68,7 +68,7 @@
             </ul>
           </div>
         </div>
-      </nav>            
+      </nav>
     </header>
     <main>
       <%= yield %>
