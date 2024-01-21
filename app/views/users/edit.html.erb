@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="mx-auto">
-      <h2>User info</h2>
+      <h1>User info</h1>
       <% if @user.errors.any? %>
         <%= @user.errors.count %>error prohibited this obj from being saved:
         <ul>
@@ -21,7 +21,7 @@
         </div>
         <div class="form_group">
           <div><label for="inputIntroduction">Introduction</label></div>
-          <div><%= f.text_field :introduction, id:"inputIntroduction"%></div>
+          <div><%= f.text_field :introduction, id:"inputIntroduction" %></div>
         </div>
         <div class="form_group">
           <div><%= f.submit "Update User", class: "btn btn-secondary" %></div>
